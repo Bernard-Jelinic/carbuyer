@@ -24,7 +24,7 @@ Carbuyer project are divided into three modules:
 3. Paste inside root directory(for xampp xam/htdocs, for wamp wamp/www, for lamp var/www/html)
 4. Open phpmyadmin (http://localhost/phpmyadmin)
 5. Create a database with name carbuyer
-6. Import carbuyer.sql file(given inside the zip package)
+6. Import carbuyer.sql file (given inside the zip package)
 7. Run the script http://localhost/carbuyer/public/
 8. For admin panel http://localhost/carbuyer/public/admin
 
