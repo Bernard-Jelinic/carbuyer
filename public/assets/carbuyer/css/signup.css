@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap");
+/* start: global styles */
+
+body {
+  font-family: "Roboto", "Helvetica", "Sans-serif";
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #444;
+  line-height: 1.7;
+}
+
+* {
+  outline: none;
+}
+
+/* *:not(.slick-track):not(.slick-list) {
+  transition: 0.4s;
+} */
+
+.container {
+  /* max-width: 1140px; */
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  text-decoration: none; /*ovo briše underline*/
+}
+
+/* end: global styles */
+
+/* start: header */
+
+main {
+  padding-top: 72px;
+}
+
+header {
+  padding: 0.5rem;
+  background: #fff;
+  height: 72px;
+  box-sizing: border-box;
+  top: 0;
+  border-bottom: 1px solid #999;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+header ul li a {
+  color: #000;
+  font-size: 16px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  color: #00aeef;
+}
+
+#logo {
+  font-family: "Roboto", "Helvetica", "Sans-serif";
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #000;
+  position: relative;
+  top: 4px;
+}
+
+.hamburger-menu {
+  background-color: transparent;
+  border: 1px solid #000;
+  padding: 3px 5px;
+  width: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: none;
+}
+
+.hamburger-menu .strip {
+  display: block;
+  height: 1px;
+  background-color: #000;
+  margin: 4px 0;
+}
+
+#close-flyout {
+  display: none;
+}
+
+/* end: header */
+
+/* start: account-page */
+.account-page {
+  padding: 50px 0;
+  /*ovaj dio poslije jpg forsa da se promijeni slika u browseru*/
+  background: url(../images/home/cover.jpg?v=1234) center center no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.form-container {
+  background: #fff;
+  max-width: 300px;
+  width: 100%;
+  min-height: 440px; /*visina forma*/
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /*ovo sakriva da bude lijevo i desno */
+}
+.form-container span {
+  font-weight: bold;
+  padding: 0 40px;
+  color: #555;
+  display: inline-block;
+}
+.form-btn {
+  display: inline-block;
+}
+
+.signUp:hover {
+  cursor: pointer;
+}
+
+.form-container form {
+  max-width: 300px;
+  width: 100%;
+  position: absolute;
+  top: 130px;
+  transition: transform 1.5s;
+}
+form input {
+  border-radius: 3px;
+  border: 1px solid #6c757d;
+  font-size: 1rem;
+  padding: 10px;
+  color: #6c757d;
+  box-sizing: border-box;
+  max-width: 260px;
+  width: 100%;
+  margin: 5px 0 5px 0;
+  justify-self: center;
+}
+
+button.rounded {
+  background: #00aeef;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 10px 30px;
+  line-height: 1.5;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button.rounded:hover {
+  background: #333;
+  color: #fff;
+}
+
+#loginForm {
+  display: grid;
+}
+
+#signUpForm {
+  /* animation: moveReg 1.4s; */
+  display: grid;
+}
+
+@keyframes moveReg {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes secondMoveReg {
+  0% {
+    left: 300px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+/* #signUpPassword{
+  display: flex;
+} */
+
+.signUpEye {
+  height: 30px;
+  width: 16px;
+  justify-self: end;
+  align-self: bottom;
+  position: relative;
+  bottom: 40px;
+  padding: 0 5px;
+  overflow: hidden;
+}
+
+#signUpPassword2 {
+  position: relative;
+  bottom: 30px;
+}
+
+.signUpEye2 {
+  height: 30px;
+  width: 16px;
+  justify-self: end;
+  align-self: bottom;
+  position: relative;
+  bottom: 70px;
+  padding: 0 5px;
+  overflow: hidden;
+}
+
+#indicator {
+  width: 100px;
+  border: none;
+  background: #00aeef;
+  height: 3px;
+  margin-top: 8px;
+  transition: transform 1.5s;
+}
+/* end: account-page */
+
+/* start: footer */
+footer {
+  background: #333;
+  padding: 8rem 0 3rem 0;
+}
+
+footer .flex {
+  padding-bottom: 6rem;
+  border-bottom: 1px solid #777;
+}
+
+footer h5 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+footer h5.follow-us {
+  margin-top: 1rem;
+}
+
+footer .footer-about {
+  width: 47%;
+}
+
+footer .footer-about p {
+  width: 65%;
+  color: #777;
+}
+
+footer .footer-quick-links {
+  width: 16%;
+}
+
+footer .footer-quick-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-quick-links ul li {
+  margin: 10px 0;
+}
+
+footer .footer-quick-links ul li a {
+  color: #777;
+}
+
+footer .footer-quick-links ul li a:hover {
+  color: #fff;
+}
+
+footer .footer-subscribe {
+  width: 35%;
+}
+
+#subscribe-container {
+  position: relative;
+}
+
+footer .footer-subscribe input {
+  border-radius: 30px;
+  height: 43px;
+  font-family: "Roboto", "Helvetica", "Sans-serif";
+  border: 1px solid #6c757d;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  width: 80%;
+}
+
+footer button.right-rounded {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: #00aeef;
+  font-size: 16px;
+  color: #000;
+  padding: 10px 30px 9px;
+  line-height: 1.5;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+
+footer button.right-rounded:hover {
+  background: #fff;
+}
+
+footer .footer-subscribe ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-subscribe ul li {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+footer .footer-subscribe ul li:first-child {
+  margin-left: 0;
+}
+
+footer .footer-subscribe ul li a {
+  color: #777;
+}
+
+footer .footer-subscribe ul li a span:hover {
+  color: #fff;
+  animation: roll 1.1s ease-in-out;
+  transform: scale(2);
+}
+
+@keyframes roll {
+  0% {
+    transform: scale(2) rotate(0deg);
+  }
+  20%,
+  40% {
+    transform: scale(2) rotate(30deg);
+  }
+  50% {
+    transform: scale(2) rotate(-30deg);
+  }
+  75%,
+  90% {
+    transform: scale(2) rotate(30deg);
+  }
+  100% {
+    transform: scale(2) rotate(0deg);
+  }
+}
+
+footer small {
+  color: #777;
+  margin-top: 3rem;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+}
+/* end: footer */
+
+/* start: media queries */
+
+/* @media (max-width: 991px) { */
+@media (max-width: 1240px) {
+  #logo {
+    top: 1px;
+  }
+  #nav-toggle {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    background: #fff;
+    right: -100%;
+    top: 0;
+    margin: 0;
+    padding: 2rem;
+    height: 100%;
+    width: 300px;
+    box-sizing: border-box;
+    box-shadow: 5px 0 5px 3px black;
+  }
+  #close-flyout {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    font-size: 30px;
+    color: #777;
+    cursor: pointer;
+    display: block;
+    line-height: 1;
+    margin: 0;
+  }
+  nav ul li {
+    display: block;
+    margin: 20px 0;
+  }
+  nav ul li:first-child {
+    margin-top: 50px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: #212529;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    color: #00aeef;
+  }
+}
+
+@media (max-width: 767px) {
+  p {
+    font-size: 0.9rem;
+  }
+  .container {
+    max-width: 540px;
+  }
+  footer {
+    padding: 6rem 0;
+  }
+  footer .flex {
+    flex-wrap: wrap;
+  }
+  footer .flex > div {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  footer .flex > div:first-child {
+    margin-top: 0;
+  }
+  footer .footer-about p {
+    font-size: 1rem;
+    width: 100%;
+  }
+  footer .footer-subscribe input {
+    width: 90%;
+  }
+  footer h5.follow-us {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  footer {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 400px) {
+  nav ul {
+    width: 200px;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 300px) {
+  .form-container span {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 200px) {
+  .form-container span {
+    padding: 0 20px;
+  }
+}
+
+/* end: media queries */
